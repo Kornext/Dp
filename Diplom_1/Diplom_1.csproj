@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{50CC3512-9E1C-4108-B1CB-205CDC8B70BB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Diplom_1</RootNamespace>
+    <AssemblyName>Diplom_1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CMYK.cs" />
+    <Compile Include="ColorSpaceHelper.cs" />
+    <Compile Include="HSB.cs" />
+    <Compile Include="HSL.cs" />
+    <Compile Include="RGB.cs" />
+    <Compile Include="Editor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor.Designer.cs">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Color_model.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Color_model.Designer.cs">
+      <DependentUpon>Color_model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Histogram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Histogram.Designer.cs">
+      <DependentUpon>Histogram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Rotation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rotation.Designer.cs">
+      <DependentUpon>Rotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scale.Designer.cs">
+      <DependentUpon>Scale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Slideshow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Slideshow.Designer.cs">
+      <DependentUpon>Slideshow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YUV.cs" />
+    <EmbeddedResource Include="Color_model.resx">
+      <DependentUpon>Color_model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor.resx">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Histogram.resx">
+      <DependentUpon>Histogram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rotation.resx">
+      <DependentUpon>Rotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scale.resx">
+      <DependentUpon>Scale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Slideshow.resx">
+      <DependentUpon>Slideshow.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1L.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Фон.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\-34y0cLA468.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\-34y0cLA4681.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11111.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\123.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\влево.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\влево1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\воспроизвести.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\воспроизвести1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\вправо.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\вправо1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\выбор папки.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\выбор папки1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\развернуть.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\развернуть1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\редактирование.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\редактирование1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\повернуть влево.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\повернуть влево1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\повернуть вправо.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\повернуть вправо1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\стоп.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\стоп1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\таймер.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\таймер1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\увеличить.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\увеличить1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\уменьшить.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\уменьшить1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fon_grey.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\выделение.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\кисть.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\квадрат.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\линия.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\пипетка.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\заливка.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\выделение произвольной области.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\обрезать.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\копировать.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\цвет.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tp7AtAHWq5U.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\вырезать.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Гистограмма.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Глаз.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\обрезать1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
