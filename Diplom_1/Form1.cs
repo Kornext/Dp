@@ -593,13 +593,13 @@ namespace Diplom_1
 
         private void pict_delete_MouseDown(object sender, MouseEventArgs e)
         {
-            //TODO смена изображения нажатия
+            pict_delete.Image = Properties.Resources.delete_click as Bitmap;
             this.delete();
         }
 
         private void pict_delete_MouseUp(object sender, MouseEventArgs e)
         {
-            //TODO смена изображения на дефолтное
+            pict_delete.Image = Properties.Resources.delete as Bitmap;
         }
         #endregion
     }

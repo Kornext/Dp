@@ -276,6 +276,10 @@
     <None Include="Resources\обрезать1.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\delete.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\delete_click.png" />
     <Content Include="Resources\delete_test_pict.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

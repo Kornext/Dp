@@ -38,3 +38,4 @@ C:\Users\Kornext_N\Source\Repos\KMP-Viewer\Diplom_1\obj\Debug\Diplom_1.csproj.Ge
 C:\Users\Kornext_N\Source\Repos\KMP-Viewer\Diplom_1\obj\Debug\Diplom_1.csproj.CoreCompileInputs.cache
 C:\Users\Kornext_N\Source\Repos\KMP-Viewer\Diplom_1\obj\Debug\Diplom_1.exe
 C:\Users\Kornext_N\Source\Repos\KMP-Viewer\Diplom_1\obj\Debug\Diplom_1.pdb
+C:\Users\Kornext_N\Source\Repos\KMP-Viewer\Diplom_1\bin\Debug\Resources\delete.jpg
