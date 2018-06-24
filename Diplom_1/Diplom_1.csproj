@@ -141,22 +141,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="1L.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Фон.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\-34y0cLA468.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\-34y0cLA4681.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\11111.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\123.jpg" />
@@ -286,6 +274,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\обрезать1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\delete_test_pict.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

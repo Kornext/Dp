@@ -20,7 +20,7 @@ namespace Diplom_1
             open();
         }
         private string path_d; //путь каталога
-        private string[] files = null; //пути всех файлов в каталоге
+        private List<string> files = new List<string>(); //пути всех файлов в каталоге
         private string pict; //путь с именем текущего изображения
         private string form_name = "KMP Viewer";
 
@@ -48,6 +48,16 @@ namespace Diplom_1
         void PrintTime(object state) //для таймера
         {
             right();
+        }
+
+        private void delete()
+        {
+            image1.Dispose();
+            image1_copy.Dispose();
+            int indexArraysPath = files.IndexOf(pict);
+            right();
+            File.Delete(files[indexArraysPath]);
+            files.RemoveAt(indexArraysPath);
         }
 
         private void expand() //Развернуть
@@ -123,18 +133,17 @@ namespace Diplom_1
                 pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
                 pictureBox1.Height = pict_h;
                 pictureBox1.Width = pict_w;
-                int n;
-                n = Array.IndexOf(files, pict);
-                if (n == files.Length - 1)
+                int indexArraysPath = files.IndexOf(pict);
+                if (indexArraysPath == files.Count - 1)
                 {
-                    n = -1;
+                    indexArraysPath = -1;
                 }
-                image1 = new Bitmap(files[n + 1]);
+                image1 = new Bitmap(files[indexArraysPath + 1]);
                 pictureBox1.Image = image1;
-                pict = files[n + 1];
+                pict = files[indexArraysPath + 1];
                 pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
                 string temp = "";
-                temp = files[n + 1];
+                temp = files[indexArraysPath + 1];
                 int k = 0;
                 for (int i = 0; i < temp.Length; i++)
                 {
@@ -155,18 +164,17 @@ namespace Diplom_1
                 pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
                 pictureBox1.Height = pict_h;
                 pictureBox1.Width = pict_w;
-                int n;
-                n = Array.IndexOf(files, pict);
-                if (n == 0)
+                int indexArraysPath = files.IndexOf(pict);
+                if (indexArraysPath == 0)
                 {
-                    n = files.Length;
+                    indexArraysPath = files.Count;
                 }
-                image1 = new Bitmap(files[n - 1]);
+                image1 = new Bitmap(files[indexArraysPath - 1]);
                 pictureBox1.Image = image1;
-                pict = files[n - 1];
+                pict = files[indexArraysPath - 1];
                 pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
                 string temp = "";
-                temp = files[n - 1];
+                temp = files[indexArraysPath - 1];
                 int k = 0;
                 for (int i = 0; i < temp.Length; i++)
                 {
@@ -253,7 +261,7 @@ namespace Diplom_1
                 pictureBox1.Image = image1;
                 path_d = Path.GetDirectoryName(path);
                 string[] extensions = { ".jpg", ".png", ".bmp", ".jpeg" };
-                files = Directory.GetFiles(path_d, "*.*").Where(f => extensions.Contains(System.IO.Path.GetExtension(f).ToLower())).ToArray();
+                files = Directory.GetFiles(path_d, "*.*").Where(f => extensions.Contains(System.IO.Path.GetExtension(f).ToLower())).ToList<string>();
                 pict = path;
                 pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
                 string temp = "";
@@ -581,6 +589,17 @@ namespace Diplom_1
         {
             if(image_open)
                 expand();
+        }
+
+        private void pict_delete_MouseDown(object sender, MouseEventArgs e)
+        {
+            //TODO смена изображения нажатия
+            this.delete();
+        }
+
+        private void pict_delete_MouseUp(object sender, MouseEventArgs e)
+        {
+            //TODO смена изображения на дефолтное
         }
         #endregion
     }

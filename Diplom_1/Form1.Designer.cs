@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pict_edit = new System.Windows.Forms.PictureBox();
             this.pict_rot_lef = new System.Windows.Forms.PictureBox();
             this.pict_rot_rig = new System.Windows.Forms.PictureBox();
@@ -42,6 +43,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pict_fon = new System.Windows.Forms.PictureBox();
+            this.pict_delete = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pict_edit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pict_rot_lef)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pict_rot_rig)).BeginInit();
@@ -56,6 +58,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pict_fon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pict_delete)).BeginInit();
             this.SuspendLayout();
             // 
             // pict_edit
@@ -63,7 +66,7 @@
             this.pict_edit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pict_edit.ErrorImage = null;
             this.pict_edit.Image = global::Diplom_1.Properties.Resources.редактирование;
-            this.pict_edit.Location = new System.Drawing.Point(373, 381);
+            this.pict_edit.Location = new System.Drawing.Point(400, 381);
             this.pict_edit.Name = "pict_edit";
             this.pict_edit.Size = new System.Drawing.Size(30, 30);
             this.pict_edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -251,12 +254,27 @@
             this.pict_fon.TabIndex = 10;
             this.pict_fon.TabStop = false;
             // 
+            // pict_delete
+            // 
+            this.pict_delete.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pict_delete.ErrorImage = null;
+            this.pict_delete.Image = ((System.Drawing.Image)(resources.GetObject("pict_delete.Image")));
+            this.pict_delete.Location = new System.Drawing.Point(342, 381);
+            this.pict_delete.Name = "pict_delete";
+            this.pict_delete.Size = new System.Drawing.Size(30, 30);
+            this.pict_delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pict_delete.TabIndex = 21;
+            this.pict_delete.TabStop = false;
+            this.pict_delete.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pict_delete_MouseDown);
+            this.pict_delete.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pict_delete_MouseUp);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(537, 426);
+            this.Controls.Add(this.pict_delete);
             this.Controls.Add(this.pict_edit);
             this.Controls.Add(this.pict_rot_lef);
             this.Controls.Add(this.pict_rot_rig);
@@ -289,6 +307,7 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pict_fon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pict_delete)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -308,6 +327,7 @@
         private System.Windows.Forms.PictureBox pict_edit;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pict_delete;
     }
 }
 
