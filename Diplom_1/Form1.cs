@@ -52,12 +52,33 @@ namespace Diplom_1
 
         private void delete()
         {
-            image1.Dispose();
-            image1_copy.Dispose();
-            int indexArraysPath = files.IndexOf(pict);
-            right();
-            File.Delete(files[indexArraysPath]);
-            files.RemoveAt(indexArraysPath);
+            if (image_open)
+            {
+                DialogResult dialogResult = MessageBox.Show("Are you sure want to delete the image?", "Delete this picture?", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    image1.Dispose();
+                    image1_copy.Dispose();
+                    int indexArraysPath = files.IndexOf(pict);
+                    if (files.Count == 1)
+                    {
+                        pictureBox1.Image = null;
+                        File.Delete(files[indexArraysPath]);
+                        files.RemoveAt(indexArraysPath);
+                        image_open = false;
+                    }
+                    else
+                    {
+                        right();
+                        File.Delete(files[indexArraysPath]);
+                        files.RemoveAt(indexArraysPath);
+                    }
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    //do something else
+                }
+            }
         }
 
         private void expand() //Развернуть
@@ -82,6 +103,7 @@ namespace Diplom_1
                 pict_rot_lef.Visible = false;
                 pict_rot_rig.Visible = false;
                 pict_panel.Visible = false;
+                pict_delete.Visible = false;
                 clr = panel1.BackColor;
                 panel1.BackColor = Color.Black;
                 panel1.Location = new Point(0, 0);
@@ -123,6 +145,7 @@ namespace Diplom_1
                 pict_rot_lef.Visible = true;
                 pict_rot_rig.Visible = true;
                 pict_panel.Visible = true;
+                pict_delete.Visible = true;
             }
         }
 
@@ -195,7 +218,7 @@ namespace Diplom_1
                 if (index_mass > 0) //если еще есть куда увеличивать
                 {
                     index_mass--; //уменьшаем индекс
-                    if (index_mass == 9)
+                    if (index_mass == 9) //9 - изображение по умолчанию, коэффициент масштабирования 1
                     {
                         pictureBox1.Image = null;
                         pictureBox1.Height = pict_h;
@@ -210,12 +233,7 @@ namespace Diplom_1
                         double hght = pict_h * zna4[index_mass];
                         Size size = new Size(Convert.ToInt32(wd), Convert.ToInt32(hght)); //Увеличиваем на 25%
                         pictureBox1.Size = size;
-                        if (index_mass > 9)
-                        {
-                            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
-                        }
-                        else
-                            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+                        pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
                     }
                 }
             }
@@ -228,7 +246,7 @@ namespace Diplom_1
                 if (index_mass < 18)
                 {
                     index_mass++;
-                    if (index_mass == 9)
+                    if (index_mass == 9) //9 - изображение по умолчанию, коэффициент масштабирования 1
                     {
                         pictureBox1.Image = null;
                         pictureBox1.Height = pict_h;
@@ -237,17 +255,13 @@ namespace Diplom_1
                         pictureBox1.Image = image1;
                     }
                     else
-                    {         
+                    {
+                        pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
                         double wd = pict_w * zna4[index_mass];
                         double hght = pict_h * zna4[index_mass];
                         Size size = new Size(Convert.ToInt32(wd), Convert.ToInt32(hght)); //Уменьшаем на 25%
                         pictureBox1.Size = size;
-                        if (index_mass > 9)
-                        {
-                            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
-                        }
-                        else
-                            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+                        pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
                     }
                 }
             }
@@ -391,6 +405,11 @@ namespace Diplom_1
             else if (keyData == Keys.Escape) //Кнопка развернуть
             {
                 expand();
+                return true;
+            }
+            else if(keyData == Keys.Delete)
+            {
+                delete();
                 return true;
             }
             else
@@ -594,7 +613,7 @@ namespace Diplom_1
         private void pict_delete_MouseDown(object sender, MouseEventArgs e)
         {
             pict_delete.Image = Properties.Resources.delete_click as Bitmap;
-            this.delete();
+            delete();
         }
 
         private void pict_delete_MouseUp(object sender, MouseEventArgs e)

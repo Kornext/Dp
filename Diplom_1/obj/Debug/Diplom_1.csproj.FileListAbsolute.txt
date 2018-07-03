@@ -22,9 +22,6 @@ C:\Users\Kornext\Documents\Visual Studio 2017\Projects\Diplom_1\Diplom_1\obj\Deb
 C:\Users\Kornext\Documents\Visual Studio 2017\Projects\Diplom_1\Diplom_1\obj\Debug\Diplom_1.Scale.resources
 C:\Users\Kornext\Documents\Visual Studio 2017\Projects\Diplom_1\Diplom_1\obj\Debug\Diplom_1.Rotation.resources
 C:\Users\Kornext\Documents\Visual Studio 2017\Projects\Diplom_1\Diplom_1\obj\Debug\Diplom_1.Color_model.resources
-C:\Users\Kornext_N\Source\Repos\KMP-Viewer\Diplom_1\bin\Debug\Diplom_1.exe.config
-C:\Users\Kornext_N\Source\Repos\KMP-Viewer\Diplom_1\bin\Debug\Diplom_1.exe
-C:\Users\Kornext_N\Source\Repos\KMP-Viewer\Diplom_1\bin\Debug\Diplom_1.pdb
 C:\Users\Kornext_N\Source\Repos\KMP-Viewer\Diplom_1\obj\Debug\Diplom_1.csprojAssemblyReference.cache
 C:\Users\Kornext_N\Source\Repos\KMP-Viewer\Diplom_1\obj\Debug\Diplom_1.Color_model.resources
 C:\Users\Kornext_N\Source\Repos\KMP-Viewer\Diplom_1\obj\Debug\Diplom_1.Editor.resources
@@ -36,6 +33,9 @@ C:\Users\Kornext_N\Source\Repos\KMP-Viewer\Diplom_1\obj\Debug\Diplom_1.Scale.res
 C:\Users\Kornext_N\Source\Repos\KMP-Viewer\Diplom_1\obj\Debug\Diplom_1.Slideshow.resources
 C:\Users\Kornext_N\Source\Repos\KMP-Viewer\Diplom_1\obj\Debug\Diplom_1.csproj.GenerateResource.cache
 C:\Users\Kornext_N\Source\Repos\KMP-Viewer\Diplom_1\obj\Debug\Diplom_1.csproj.CoreCompileInputs.cache
-C:\Users\Kornext_N\Source\Repos\KMP-Viewer\Diplom_1\obj\Debug\Diplom_1.exe
-C:\Users\Kornext_N\Source\Repos\KMP-Viewer\Diplom_1\obj\Debug\Diplom_1.pdb
 C:\Users\Kornext_N\Source\Repos\KMP-Viewer\Diplom_1\bin\Debug\Resources\delete.jpg
+C:\Users\Kornext_N\Source\Repos\KMP-Viewer\Diplom_1\bin\Debug\KMP Viewer.exe.config
+C:\Users\Kornext_N\Source\Repos\KMP-Viewer\Diplom_1\bin\Debug\KMP Viewer.exe
+C:\Users\Kornext_N\Source\Repos\KMP-Viewer\Diplom_1\bin\Debug\KMP Viewer.pdb
+C:\Users\Kornext_N\Source\Repos\KMP-Viewer\Diplom_1\obj\Debug\KMP Viewer.exe
+C:\Users\Kornext_N\Source\Repos\KMP-Viewer\Diplom_1\obj\Debug\KMP Viewer.pdb

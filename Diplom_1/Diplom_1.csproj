@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Diplom_1</RootNamespace>
-    <AssemblyName>Diplom_1</AssemblyName>
+    <AssemblyName>KMP Viewer</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -279,7 +279,7 @@
     <Content Include="Resources\delete.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\delete_click.png" />
+    <None Include="Resources\delete_click.jpg" />
     <Content Include="Resources\delete_test_pict.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
